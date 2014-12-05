@@ -1,25 +1,12 @@
+
 <html>
 
 <meta http-equiv="Content-Type" content="admin2.html charset=utf-8" />
-
-<!-- Code du header -->
-
-<header>
-This is the header
-</header>
 	 
 <?php
-		 
-		    /*Paramètres de connexion au serveur*/
-			//$server="localhost";
-			//$user="root";w
+		     
 			
-			/*Paramètres de sélection de la base de données*/
-			//$database="camp";
-	         
-			/*Connexion au serveur et vérification de la connexion*/
-			
-			echo "Data sended";
+			/*Implementation of the PHP methods POST*/
 			$name=$_POST["name"];
 			$middlename=$_POST["middlename"];
 			$lastname=$_POST["lastname"];
@@ -34,6 +21,7 @@ This is the header
 			$entry=$_POST["entry"];
 			$exit=$_POST["exit"];
 			
+			/*Connection to the server and check it*/
 			try
 			{
 			
@@ -47,14 +35,13 @@ This is the header
 			     die('Error. Cannot connect to the MySQL database'.$e->getMessage());
 			  
 			}
-			echo "sss";
 			
-			 //$req= $connexion->prepare('INSERT INTO user(pseudo,password,mail,name,adress) VALUES(:pseudo,:mdp,:email,:name,:adress)');
-			//Write mySQL request
+			
+			 /*Insert in the mySQL admin table the parameters*/
 			 $request= $bdd->prepare('INSERT INTO admin VALUES(:name,:middlename,:lastname,:dateofbirth,:country,:region,:tent,:entry,:exit,:id,:health,:vaccinate,:vaccination)');
 			 
 			 
-     		//Send mySQL request
+     		 /*Send the mySQL requests*/
 			 $request->execute(array(
 			     'name' =>$name,
 				 'middlename' =>$middlename,
@@ -70,6 +57,8 @@ This is the header
 				 'vaccinate' =>$vaccinate,
 				 'vaccination' =>$vaccination
 				 ));
+				 
+				 echo "Data sended";
 					  
 ?>
 
