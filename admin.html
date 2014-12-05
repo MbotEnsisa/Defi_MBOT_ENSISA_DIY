@@ -1,0 +1,150 @@
+
+<head>
+
+<!-- Meta Data -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Short description of your site here." />
+<meta name="keywords" content="keywords, go, here, seperated, by, commas" />
+
+<!-- Site Title -->
+<title>MBOT Humanitary</title>
+
+<!-- Link to Style External Sheet -->
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div id='page_wrapper'>
+
+<div id='page_header'>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MBOT Help</h1>
+
+</div>
+
+<div id='menu_bar'>
+
+<div id="navcontainer">
+<ul id="navlist">
+<li><a href="Index.html"> Index </a></li>
+<li><a href="Admin.html"> Admin </a></li>
+<li><a href="User.html"> User Research </a></li>
+
+</ul>
+</div>
+
+</div>
+
+<div id='content_wrapper'>
+
+<div class='spacer'></div>
+
+<div id='mid'>
+
+	 <!-- Se connecter au serveur mysql avec php et teste si la connexion est bien établie-->
+     
+     <form  method="post" action="admin.php">
+	 
+	     <!-- Code du champ "Coordinates" -->
+         
+         <fieldset>
+             <legend><h2>Coordinates</h2></legend> <!-- Name of the first fieldset --> 
+	   
+	         <label for="name"><strong>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+             <input type="text" name="name" id="name" />
+             <br /> <br />
+	   
+	         <label for="middlename"><strong>Middle Name:&nbsp;&nbsp;</strong> </label>
+             <input type="text" name="middlename" id="middlename" />
+             <br /> <br />
+	   
+             <label for="lastname"><strong>Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+             <input type="text" name="lastname" id="lastname" />
+	         <br /> <br />
+	   
+	         <label for="dateofbirth"><strong>Date of Birth: &nbsp;&nbsp;</strong></label>
+             <input type="date" name="dateofbirth" id="dateofbirth" />
+	         <br /> <br />
+	  
+             <label for="country"><strong>Country: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+	         <input type="text" name="country" id="country" />
+	         <br /> <br />
+	   
+	         <label for="region"><strong>Region: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+             <input type="text" name="region" id="region" />
+	         <br /> <br />
+	   
+         </fieldset>
+   
+             <br />
+			 
+	     <!-- Code du champ "Organisation" -->
+   
+         <fieldset>
+             <legend><h2>Organisation</h2></legend> <!-- Name of the second fieldset --> 
+ 
+             <label for="tent"><strong>Tent Number: </strong></label>
+             <input type="number" min=1 name="tent" id="tent" />
+             <br /> <br />
+			 
+			 <label for="entry"><strong>Date of Entry: </strong></label>
+             <input type="date" name="entry" id="entry" />
+             <br /> <br />
+			 
+			 <label for="exit"><strong>Date of Exit: &nbsp;&nbsp;</strong></label>
+             <input type="date" name="exit" id="exit" />
+             
+			 <label for="exit"><strong>ID: </strong></label>
+             <input type="number" name="id" id="id" />
+			 
+			 
+			 <p>
+             <strong>Health</strong>
+             <input type="radio" name="state" value="good" id="good" /> <label for="good">Good</label>
+             <input type="radio" name="state" value="hospital" id="hospital" /> <label for="hospital">Hospital</label>
+             <input type="radio" name="state" value="dead" id="dead" /> <label for="dead">Dead</label>
+             </p>
+			 
+			 <p>
+             <strong>Vaccinate</strong>
+             <input type="radio" name="state" value="done" id="done" /> <label for="done">Done</label>
+             <input type="radio" name="state" value="notdone" id="notdone" /> <label for="notdone">Not Done</label>
+             </p>
+			 
+			 <label for="vaccination"><strong>Type of Vaccination: </strong></label>
+	         <input type="text" name="vaccination" id="vaccination" />
+	         <br /> <br />
+	   
+         </fieldset>
+         
+		 <!-- Code des deux boutons -->
+		 <br />
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input type="button" name="enter" value="ENTER">
+		 <input type="button" name="find" value="FIND">
+
+
+
+</div>
+
+
+
+
+<div class='spacer'></div>
+
+</div>
+
+<div id='page_footer'>
+
+
+</div>
+
+</div>
+
+
+
+</body>
+
+</html>
